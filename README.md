@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KarateCorner
 
-## Getting Started
-
-First, run the development server:
+Single-page marketing site for a martial arts gym. Next.js App Router + TypeScript +
+Tailwind CSS v4 + Framer Motion.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design tokens
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Defined in [`src/app/globals.css`](src/app/globals.css) under `@theme`, so they are
+available as Tailwind utilities (`bg-navy-900`, `text-brown-400`, `bg-bone-100`, …).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Token    | Role                                          |
+| -------- | --------------------------------------------- |
+| `navy`   | Primary dark — hero, alternating sections      |
+| `brown`  | Secondary accent — CTAs, panels, eyebrow rules |
+| `bone`   | Off-white / white — light sections, type       |
+| `gold`   | Optional award badge accent only               |
 
-## Learn More
+Type is Poppins throughout (700–800 headings, 500–600 body), loaded via
+`next/font/google` in [`src/app/layout.tsx`](src/app/layout.tsx).
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  app/
+    layout.tsx        Poppins, metadata + Open Graph
+    page.tsx          Section composition
+    globals.css       Theme tokens, texture + outline helpers
+  components/
+    Navbar.tsx        Transparent → solid on scroll, animated mobile drawer
+    Footer.tsx
+    ui/               Button, Card, Section, Reveal, Logo, ProgramIcon
+    sections/         Hero, About, Programs, Instructors, Achievements,
+                      Schedule, Testimonials, Contact
+  lib/
+    content.ts        All placeholder copy — swap for a CMS
+    utils.ts          cn() class joiner
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`Reveal` is the shared scroll-animation wrapper (fade + slide, fires once, respects
+`prefers-reduced-motion`). `Section` handles the tone alternation, eyebrow/title/lead
+header and `aria-labelledby` wiring.
 
-## Deploy on Vercel
+## Placeholder content to replace before launch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Copy, names, prices and the timetable in `src/lib/content.ts`.
+- Instructor and gym photography (currently Unsplash URLs allow-listed in
+  `next.config.ts` → `images.remotePatterns`).
+- The contact form only sets local state; wire it to a server action or form service.
+- The map block in `Contact.tsx` is a labelled placeholder — drop in an iframe embed.
+- `siteUrl` and `/og.svg` in `src/app/layout.tsx`.

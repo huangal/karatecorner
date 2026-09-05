@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17294f"/>
+      <stop offset="55%" stop-color="#070d1c"/>
+      <stop offset="100%" stop-color="#04070f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="880" y="-60" width="420" height="420" transform="rotate(45 1090 150)" fill="none" stroke="#8b5535" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="80" y="150" width="60" height="8" fill="#a56a47"/>
+  <text x="80" y="230" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#c28c68" letter-spacing="8">KARATECORNER</text>
+  <text x="80" y="360" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#ffffff">Train like the title</text>
+  <text x="80" y="460" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" fill="#ffffff">is already yours.</text>
+  <text x="80" y="540" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#e4ded5" fill-opacity="0.7">Karate · Muay Thai · BJJ · Kickboxing · Kids</text>
+</svg>
