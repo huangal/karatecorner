@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils";
 import Reveal from "./Reveal";
 
-type Tone = "navy" | "bone" | "brown" | "white";
+type Tone = "ink" | "washi" | "white" | "sage";
 
 const TONES: Record<Tone, string> = {
-  navy: "bg-navy-900 text-bone-100 texture-grid",
-  bone: "bg-bone-100 text-navy-900",
-  white: "bg-bone-50 text-navy-900",
-  brown: "bg-brown-800 text-bone-100 texture-grid",
+  ink: "bg-ink-900 text-washi-100 texture-grid",
+  washi: "bg-washi-100 text-ink-900",
+  white: "bg-washi-50 text-ink-900",
+  sage: "bg-sage-800 text-washi-100 texture-grid",
 };
 
 type SectionProps = {
@@ -23,7 +23,7 @@ type SectionProps = {
 
 export default function Section({
   id,
-  tone = "bone",
+  tone = "washi",
   eyebrow,
   title,
   lead,

@@ -1,30 +1,26 @@
 import type { Program } from "@/lib/content";
 
 const PATHS: Record<Program["icon"], React.ReactNode> = {
-  belt: (
+  // Obi and its two hanging ends.
+  karate: (
     <>
       <path d="M4 20h40v8H4z" />
       <path d="M20 28l-6 14M28 28l6 14" />
     </>
   ),
-  fist: (
+  // A circle with a redirecting current through it — blending, not blocking.
+  aikido: (
     <>
-      <path d="M10 22v-6a4 4 0 018 0v6M18 20v-8a4 4 0 018 0v8M26 20v-6a4 4 0 018 0v10" />
-      <path d="M10 22v10a12 12 0 0012 12h4a12 12 0 0012-12V22" />
+      <circle cx="24" cy="24" r="17" />
+      <path d="M11 30c7 0 6-13 13-13s6 13 13 13" />
     </>
   ),
-  grapple: (
+  // Lotus.
+  shaolin: (
     <>
-      <circle cx="16" cy="14" r="6" />
-      <circle cx="32" cy="14" r="6" />
-      <path d="M6 44c0-8 4-14 10-14s10 6 10 14M22 44c0-8 4-14 10-14s10 6 10 14" />
-    </>
-  ),
-  shin: (
-    <>
-      <path d="M18 6v18l14 8" />
-      <path d="M32 32l-4 14M18 24l-8 10" />
-      <circle cx="18" cy="6" r="0.5" />
+      <path d="M24 42c-5-11-5-21 0-31 5 10 5 20 0 31z" />
+      <path d="M24 42c-7-7-15-9-19-5 5 8 12 10 19 5z" />
+      <path d="M24 42c7-7 15-9 19-5-5 8-12 10-19 5z" />
     </>
   ),
   kids: (
@@ -33,10 +29,18 @@ const PATHS: Record<Program["icon"], React.ReactNode> = {
       <path d="M24 18v14M14 24h20M18 44l6-12 6 12" />
     </>
   ),
-  conditioning: (
+  // Steps, rising from the baseline.
+  foundations: (
     <>
-      <path d="M6 18v12M12 14v20M36 14v20M42 18v12" />
-      <path d="M12 24h24" />
+      <path d="M4 42h40" />
+      <path d="M11 42V34M21 42V26M31 42V18M41 42V10" />
+    </>
+  ),
+  // Breath, moving out from a still centre.
+  qigong: (
+    <>
+      <circle cx="24" cy="24" r="4" />
+      <path d="M13 13a15.5 15.5 0 000 22M35 13a15.5 15.5 0 010 22" />
     </>
   ),
 };

@@ -14,11 +14,12 @@ export default function Logo({ className }: { className?: string }) {
         className="h-7 w-7 shrink-0"
         fill="none"
       >
-        <path d="M2 2h28v28H2z" className="fill-brown-600" />
-        <path d="M8 8h16v4H8zM8 20h16v4H8z" className="fill-bone-50" />
-        <path d="M14 12h4v8h-4z" className="fill-bone-50/60" />
+        <path d="M2 2h28v28H2z" className="fill-vermillion-600" />
+        {/* Torii: lintel, tie-beam, two posts. */}
+        <path d="M6 8h20v3H6zM8 14h16v2.5H8z" className="fill-washi-50" />
+        <path d="M10 11h3v13h-3zM19 11h3v13h-3z" className="fill-washi-50" />
       </svg>
-      Karate<span className="text-brown-400">Corner</span>
+      Karate<span className="text-ochre-400">Corner</span>
     </span>
   );
 }

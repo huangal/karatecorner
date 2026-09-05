@@ -31,9 +31,9 @@ export default function Testimonials() {
   return (
     <Section
       id="testimonials"
-      tone="brown"
+      tone="sage"
       eyebrow="From the mat"
-      title="What members actually say."
+      title="What students actually say."
     >
       <div
         className="relative"
@@ -58,17 +58,17 @@ export default function Testimonials() {
               <svg
                 aria-hidden="true"
                 viewBox="0 0 48 32"
-                className="h-8 w-12 text-brown-300"
+                className="h-8 w-12 text-ochre-300"
                 fill="currentColor"
               >
                 <path d="M0 32V16L10 0h9L11 16h8v16H0zm29 0V16L39 0h9l-8 16h8v16H29z" />
               </svg>
-              <blockquote className="mt-7 max-w-4xl text-2xl font-bold leading-snug text-bone-50 text-balance sm:text-3xl md:text-4xl">
+              <blockquote className="mt-7 max-w-4xl text-2xl font-bold leading-snug text-washi-50 text-balance sm:text-3xl md:text-4xl">
                 {current.quote}
               </blockquote>
-              <figcaption className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-bone-100">
+              <figcaption className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-washi-100">
                 {current.name}
-                <span className="mt-1 block text-xs font-semibold normal-case tracking-normal text-bone-200/60">
+                <span className="mt-1 block text-xs font-semibold normal-case tracking-normal text-washi-200/60">
                   {current.role}
                 </span>
               </figcaption>
@@ -76,7 +76,7 @@ export default function Testimonials() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-10 flex items-center justify-between gap-6 border-t border-bone-50/15 pt-8">
+        <div className="mt-10 flex items-center justify-between gap-6 border-t border-washi-50/15 pt-8">
           <ul className="flex items-center gap-3" role="tablist" aria-label="Testimonials">
             {TESTIMONIALS.map((item, i) => (
               <li key={item.name}>
@@ -88,7 +88,7 @@ export default function Testimonials() {
                   onClick={() => go(i)}
                   className={cn(
                     "h-1.5 w-10 transition-colors duration-300",
-                    i === index ? "bg-bone-50" : "bg-bone-50/25 hover:bg-bone-50/50",
+                    i === index ? "bg-washi-50" : "bg-washi-50/25 hover:bg-washi-50/50",
                   )}
                 />
               </li>
@@ -105,7 +105,7 @@ export default function Testimonials() {
                 type="button"
                 aria-label={label}
                 onClick={() => go(index + dir)}
-                className="flex h-12 w-12 items-center justify-center border border-bone-50/25 text-bone-50 transition-colors hover:bg-bone-50 hover:text-brown-800"
+                className="flex h-12 w-12 items-center justify-center border border-washi-50/25 text-washi-50 transition-colors hover:bg-washi-50 hover:text-sage-800"
               >
                 <svg
                   aria-hidden="true"

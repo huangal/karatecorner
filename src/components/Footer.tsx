@@ -22,19 +22,20 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 px-5 py-16 text-bone-200/70 sm:px-8">
+    <footer className="bg-ink-950 px-5 py-16 text-washi-200/70 sm:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 border-b border-bone-50/10 pb-12 md:grid-cols-12">
+        <div className="grid gap-12 border-b border-washi-50/10 pb-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Logo className="text-bone-50" />
+            <Logo className="text-washi-50" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
-              A championship martial arts gym on Ironside Avenue. Karate, Muay
-              Thai, Jiu-Jitsu, Kickboxing and Kids classes — seven days a week.
+              A traditional dojo on Ironside Avenue teaching Shotokan Karate,
+              Aikido and Shaolin Kung Fu — seven days a week. Beginners are
+              welcome in every single class.
             </p>
           </div>
 
           <nav aria-label="Footer" className="md:col-span-4">
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone-50">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-washi-50">
               Explore
             </h2>
             <ul className="mt-5 grid grid-cols-2 gap-3 text-sm font-semibold">
@@ -42,7 +43,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="underline-offset-4 transition-colors hover:text-bone-50 hover:underline"
+                    className="underline-offset-4 transition-colors hover:text-washi-50 hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -52,7 +53,7 @@ export default function Footer() {
           </nav>
 
           <div className="md:col-span-3">
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-bone-50">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-washi-50">
               Follow
             </h2>
             <ul className="mt-5 flex gap-3">
@@ -63,7 +64,7 @@ export default function Footer() {
                     aria-label={`KarateCorner on ${social.name}`}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="flex h-11 w-11 items-center justify-center border border-bone-50/20 text-bone-100 transition-colors hover:border-brown-400 hover:bg-brown-600 hover:text-bone-50"
+                    className="flex h-11 w-11 items-center justify-center border border-washi-50/20 text-washi-100 transition-colors hover:border-ochre-400 hover:bg-vermillion-600 hover:text-washi-50"
                   >
                     <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                       <path d={social.path} />
@@ -77,7 +78,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 pt-8 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} KarateCorner. All rights reserved.</p>
-          <p className="text-bone-200/40">
+          <p className="text-washi-200/60">
             Placeholder content — imagery and details are illustrative.
           </p>
         </div>

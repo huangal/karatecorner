@@ -10,11 +10,11 @@ const HOURS = [
   { days: "Monday – Thursday", time: "06:00 – 21:30" },
   { days: "Friday", time: "06:00 – 20:30" },
   { days: "Saturday", time: "08:00 – 13:00" },
-  { days: "Sunday", time: "Open mat, 10:00 – 12:00" },
+  { days: "Sunday", time: "Qigong & zazen, 10:00 – 12:00" },
 ];
 
 const FIELD_CLASS =
-  "w-full border border-bone-50/20 bg-navy-950/60 px-4 py-3.5 text-sm font-semibold text-bone-50 placeholder:text-bone-200/35 focus:border-brown-400 focus:outline-none";
+  "w-full border border-washi-50/20 bg-ink-950/60 px-4 py-3.5 text-sm font-semibold text-washi-50 placeholder:text-washi-200/35 focus:border-ochre-400 focus:outline-none";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,10 +22,10 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      tone="navy"
-      eyebrow="Get started"
+      tone="ink"
+      eyebrow="Visit the dojo"
       title="Your first class is free. Genuinely."
-      lead="Tell us what you want to train and we will put you in the right class this week — no contract, no sales pitch, just a gi and a spot on the mat."
+      lead="Tell us what you would like to train and we will put you in the right class this week. No contract, no sales pitch, no need to own a gi — just a spot on the mat and someone to show you where to stand."
     >
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-7">
@@ -39,7 +39,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="name"
-                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-bone-200/60"
+                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-washi-200/60"
               >
                 Full name
               </label>
@@ -57,7 +57,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-bone-200/60"
+                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-washi-200/60"
               >
                 Email
               </label>
@@ -75,7 +75,7 @@ export default function Contact() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="program"
-                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-bone-200/60"
+                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-washi-200/60"
               >
                 Program of interest
               </label>
@@ -95,7 +95,7 @@ export default function Contact() {
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
-                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-bone-200/60"
+                className="mb-2 block text-xs font-bold uppercase tracking-[0.18em] text-washi-200/60"
               >
                 Anything we should know?
               </label>
@@ -103,7 +103,7 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                placeholder="Training history, injuries, preferred class times…"
+                placeholder="Any training history, injuries, or class times that suit you…"
                 className={FIELD_CLASS}
               />
             </div>
@@ -115,7 +115,7 @@ export default function Contact() {
               <p
                 role="status"
                 aria-live="polite"
-                className="text-sm font-semibold text-brown-300"
+                className="text-sm font-semibold text-ochre-300"
               >
                 {submitted
                   ? "Thanks — this demo form does not send yet. Call us and we will book you in."
@@ -126,11 +126,11 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={0.1} className="lg:col-span-5">
-          <div className="border border-bone-50/12 p-8">
-            <h3 className="text-xl font-extrabold uppercase tracking-[0.14em] text-bone-50">
+          <div className="border border-washi-50/12 p-8">
+            <h3 className="text-xl font-extrabold uppercase tracking-[0.14em] text-washi-50">
               Find us
             </h3>
-            <address className="mt-5 not-italic text-sm leading-relaxed text-bone-200/75">
+            <address className="mt-5 not-italic text-sm leading-relaxed text-washi-200/75">
               412 Ironside Avenue
               <br />
               Northside District
@@ -140,26 +140,26 @@ export default function Contact() {
             <p className="mt-5 space-y-1 text-sm font-semibold">
               <a
                 href="tel:+15550142778"
-                className="block text-bone-100 underline-offset-4 hover:text-brown-300 hover:underline"
+                className="block text-washi-100 underline-offset-4 hover:text-ochre-300 hover:underline"
               >
                 (555) 014-2778
               </a>
               <a
                 href="mailto:train@karatecorner.example.com"
-                className="block text-bone-100 underline-offset-4 hover:text-brown-300 hover:underline"
+                className="block text-washi-100 underline-offset-4 hover:text-ochre-300 hover:underline"
               >
                 train@karatecorner.example.com
               </a>
             </p>
 
-            <h4 className="mt-9 text-xs font-bold uppercase tracking-[0.2em] text-bone-200/50">
+            <h4 className="mt-9 text-xs font-bold uppercase tracking-[0.2em] text-washi-200/70">
               Opening hours
             </h4>
             <dl className="mt-4 space-y-2.5 text-sm">
               {HOURS.map((row) => (
                 <div key={row.days} className="flex justify-between gap-4">
-                  <dt className="font-semibold text-bone-200/70">{row.days}</dt>
-                  <dd className="font-bold tabular-nums text-bone-50">{row.time}</dd>
+                  <dt className="font-semibold text-washi-200/70">{row.days}</dt>
+                  <dd className="font-bold tabular-nums text-washi-50">{row.time}</dd>
                 </div>
               ))}
             </dl>
@@ -169,9 +169,9 @@ export default function Contact() {
           <div
             role="img"
             aria-label="Map placeholder showing the KarateCorner location at 412 Ironside Avenue"
-            className="texture-grid mt-6 flex h-56 items-center justify-center border border-bone-50/12 bg-navy-800"
+            className="texture-grid mt-6 flex h-56 items-center justify-center border border-washi-50/12 bg-ink-800"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-bone-200/45">
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-washi-200/70">
               Map embed
             </span>
           </div>

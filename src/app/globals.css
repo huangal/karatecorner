@@ -1,29 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  /* Core palette: navy, brown, off-white + neutral grays */
-  --color-navy-950: #04070f;
-  --color-navy-900: #070d1c;
-  --color-navy-800: #0b142b;
-  --color-navy-700: #101d3d;
-  --color-navy-600: #17294f;
-  --color-navy-500: #1f3663;
-  --color-navy-400: #34507f;
+  /*
+   * Palette drawn from a traditional dojo:
+   *  ink        — aizome, the indigo the gi and the noren are dyed with
+   *  vermillion — shu, the torii/temple red. Reserved for actions.
+   *  ochre      — kincha, Shaolin robes and worn hinoki wood. Highlights.
+   *  sage       — tatami straw. Calm, used for reflective passages.
+   *  washi      — warm paper white. The ground the whole site sits on.
+   */
+  --color-ink-950: #080b12;
+  --color-ink-900: #0e1424;
+  --color-ink-800: #152036;
+  --color-ink-700: #1d2d4c;
+  --color-ink-600: #263c66;
+  --color-ink-500: #334f83;
+  --color-ink-400: #4a69a3;
+  --color-ink-300: #7b94c2;
 
-  --color-brown-900: #2e1c11;
-  --color-brown-800: #452a19;
-  --color-brown-700: #5c3823;
-  --color-brown-600: #74472c;
-  --color-brown-500: #8b5535;
-  --color-brown-400: #a56a47;
-  --color-brown-300: #c28c68;
+  --color-vermillion-700: #93321f;
+  --color-vermillion-600: #b03d24;
+  --color-vermillion-500: #c9482b;
+  --color-vermillion-400: #dd6242;
+  --color-vermillion-300: #ec8a70;
 
-  --color-bone-50: #ffffff;
-  --color-bone-100: #faf8f5;
-  --color-bone-200: #f2eee8;
-  --color-bone-300: #e4ded5;
+  --color-ochre-600: #a8761f;
+  --color-ochre-500: #c28e2c;
+  --color-ochre-400: #d6a542;
+  --color-ochre-300: #e5bf72;
 
-  --color-gold-400: #c9a227;
+  --color-sage-900: #26301f;
+  --color-sage-800: #303c26;
+  --color-sage-700: #3d4c30;
+  --color-sage-400: #7d8f66;
+  --color-sage-300: #a3b28c;
+
+  --color-washi-50: #fffdf9;
+  --color-washi-100: #faf6ee;
+  --color-washi-200: #f2ebdf;
+  --color-washi-300: #e4d9c7;
 
   --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
@@ -37,8 +52,8 @@ html {
 }
 
 body {
-  background-color: var(--color-bone-100);
-  color: var(--color-navy-900);
+  background-color: var(--color-washi-100);
+  color: var(--color-ink-900);
   font-family: var(--font-sans);
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
@@ -51,11 +66,11 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-brown-500);
-  color: var(--color-bone-50);
+  background-color: var(--color-vermillion-500);
+  color: var(--color-washi-50);
 }
 
-/* Subtle diagonal texture used on dark sections */
+/* Shoji-screen lattice, used to break up the dark sections. */
 .texture-grid {
   background-image:
     linear-gradient(115deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
@@ -64,6 +79,13 @@ body {
 }
 
 .text-outline {
-  -webkit-text-stroke: 1.5px var(--color-bone-200);
+  -webkit-text-stroke: 1.5px var(--color-washi-200);
   color: transparent;
+}
+
+/* Kanji set slightly wider than the Latin body copy reads better at size. */
+.kanji {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
 }

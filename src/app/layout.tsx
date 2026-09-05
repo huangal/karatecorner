@@ -14,17 +14,18 @@ const siteUrl = "https://karatecorner.example.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "KarateCorner — Championship Martial Arts Training",
+    default: "KarateCorner — Shotokan Karate, Aikido & Shaolin Kung Fu",
     template: "%s | KarateCorner",
   },
   description:
-    "KarateCorner is a championship martial arts gym offering Karate, Muay Thai, Brazilian Jiu-Jitsu, Kickboxing and Kids classes. Book a free trial class today.",
+    "KarateCorner is a traditional dojo teaching Shotokan Karate, Aikido and Shaolin Kung Fu, with kids classes and a beginners' course. No experience needed — book a free class today.",
   keywords: [
+    "martial arts dojo",
     "martial arts gym",
-    "karate classes",
-    "muay thai",
-    "brazilian jiu-jitsu",
-    "kickboxing",
+    "shotokan karate",
+    "aikido classes",
+    "shaolin kung fu",
+    "karate for beginners",
     "kids martial arts",
     "KarateCorner",
   ],
@@ -33,23 +34,23 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "KarateCorner",
-    title: "KarateCorner — Championship Martial Arts Training",
+    title: "KarateCorner — Shotokan Karate, Aikido & Shaolin Kung Fu",
     description:
-      "Train with national champions. Karate, Muay Thai, BJJ, Kickboxing and Kids programs. First class is free.",
+      "A traditional dojo where every black belt started as a white belt. Karate, Aikido, Kung Fu and kids classes. Your first class is free.",
     images: [
       {
         url: "/og.svg",
         width: 1200,
         height: 630,
-        alt: "KarateCorner martial arts gym",
+        alt: "KarateCorner traditional martial arts dojo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "KarateCorner — Championship Martial Arts Training",
+    title: "KarateCorner — Shotokan Karate, Aikido & Shaolin Kung Fu",
     description:
-      "Train with national champions. Karate, Muay Thai, BJJ, Kickboxing and Kids programs. First class is free.",
+      "A traditional dojo where every black belt started as a white belt. Karate, Aikido, Kung Fu and kids classes. Your first class is free.",
     images: ["/og.svg"],
   },
   robots: { index: true, follow: true },
@@ -60,7 +61,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="bg-bone-100 text-navy-900 antialiased">{children}</body>
+      <body className="bg-washi-100 text-ink-900 antialiased">{children}</body>
     </html>
   );
 }

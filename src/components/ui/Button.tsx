@@ -9,11 +9,11 @@ type Size = "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    "bg-brown-600 text-bone-50 hover:bg-brown-500 focus-visible:outline-brown-400",
+    "bg-vermillion-600 text-washi-50 hover:bg-vermillion-500 focus-visible:outline-vermillion-400",
   secondary:
-    "bg-bone-50 text-navy-900 hover:bg-bone-200 focus-visible:outline-bone-300",
+    "bg-washi-50 text-ink-900 hover:bg-washi-200 focus-visible:outline-washi-300",
   ghost:
-    "border border-current/30 bg-transparent text-current hover:bg-current/10 focus-visible:outline-current",
+    "border border-current/40 bg-transparent text-current hover:bg-current/10 focus-visible:outline-current",
 };
 
 const SIZES: Record<Size, string> = {

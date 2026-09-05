@@ -1,6 +1,6 @@
 # KarateCorner
 
-Single-page marketing site for a martial arts gym. Next.js App Router + TypeScript +
+Single-page marketing site for a martial arts dojo. Next.js App Router + TypeScript +
 Tailwind CSS v4 + Framer Motion.
 
 ```bash
@@ -12,17 +12,30 @@ npm run lint
 ## Design tokens
 
 Defined in [`src/app/globals.css`](src/app/globals.css) under `@theme`, so they are
-available as Tailwind utilities (`bg-navy-900`, `text-brown-400`, `bg-bone-100`, …).
+available as Tailwind utilities (`bg-ink-900`, `text-ochre-400`, `bg-washi-100`, …).
 
-| Token    | Role                                          |
-| -------- | --------------------------------------------- |
-| `navy`   | Primary dark — hero, alternating sections      |
-| `brown`  | Secondary accent — CTAs, panels, eyebrow rules |
-| `bone`   | Off-white / white — light sections, type       |
-| `gold`   | Optional award badge accent only               |
+| Token        | Drawn from                                   | Used for                                |
+| ------------ | -------------------------------------------- | --------------------------------------- |
+| `ink`        | Aizome — the indigo a gi and noren are dyed   | Hero, dark sections, body type on light |
+| `vermillion` | Shu — torii and temple red                    | CTAs and the accent rule. Actions only  |
+| `ochre`      | Kincha — Shaolin robes, worn hinoki           | Highlights, milestone badges, kanji     |
+| `sage`       | Tatami straw                                  | The philosophy panel and testimonials   |
+| `washi`      | Warm paper white                              | The ground the whole site sits on       |
 
-Type is Poppins throughout (700–800 headings, 500–600 body), loaded via
-`next/font/google` in [`src/app/layout.tsx`](src/app/layout.tsx).
+Section tones alternate `ink → white → ink → washi → ink → white → sage → ink`, so no
+two dark sections ever touch. Type is Poppins throughout (700–800 headings, 500–600
+body), loaded via `next/font/google` in [`src/app/layout.tsx`](src/app/layout.tsx).
+
+Every accent pairing was checked against its actual background and clears WCAG AA
+(lowest is the vermillion CTA at 5.8:1).
+
+## Disciplines
+
+The dojo teaches three lineages — Shotokan Karate, Aikido and Shaolin Kung Fu —
+plus a kids class, an eight-week beginners' course and an open qigong/zazen hour.
+All six live in `PROGRAMS` in [`src/lib/content.ts`](src/lib/content.ts), each with an
+icon key that maps to a hand-drawn SVG in
+[`ProgramIcon.tsx`](src/components/ui/ProgramIcon.tsx).
 
 ## Structure
 
@@ -50,7 +63,7 @@ header and `aria-labelledby` wiring.
 ## Placeholder content to replace before launch
 
 - Copy, names, prices and the timetable in `src/lib/content.ts`.
-- Instructor and gym photography (currently Unsplash URLs allow-listed in
+- Instructor and dojo photography (currently Unsplash URLs allow-listed in
   `next.config.ts` → `images.remotePatterns`).
 - The contact form only sets local state; wire it to a server action or form service.
 - The map block in `Contact.tsx` is a labelled placeholder — drop in an iframe embed.

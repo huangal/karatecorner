@@ -32,7 +32,7 @@ export default function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled || open
-          ? "border-b border-bone-50/10 bg-navy-950/92 backdrop-blur-md"
+          ? "border-b border-washi-50/10 bg-ink-950/92 backdrop-blur-md"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -42,7 +42,7 @@ export default function Navbar() {
       >
         <Link
           href="#hero"
-          className="text-bone-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown-400"
+          className="text-washi-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ochre-400"
           onClick={() => setOpen(false)}
         >
           <Logo />
@@ -54,12 +54,12 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="group relative text-xs font-bold uppercase tracking-[0.18em] text-bone-100/80 transition-colors hover:text-bone-50"
+                className="group relative text-xs font-bold uppercase tracking-[0.18em] text-washi-100/80 transition-colors hover:text-washi-50"
               >
                 {link.label}
                 <span
                   aria-hidden
-                  className="absolute -bottom-1.5 left-0 h-0.5 w-0 bg-brown-400 transition-all duration-300 group-hover:w-full"
+                  className="absolute -bottom-1.5 left-0 h-0.5 w-0 bg-ochre-400 transition-all duration-300 group-hover:w-full"
                 />
               </Link>
             </li>
@@ -78,7 +78,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 text-bone-50 lg:hidden"
+          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 text-washi-50 lg:hidden"
         >
           <motion.span
             animate={open ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -103,7 +103,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden bg-navy-950/98 lg:hidden"
+            className="overflow-hidden bg-ink-950/98 lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-5 pb-8 pt-2 sm:px-8">
               {NAV_LINKS.map((link, i) => (
@@ -116,7 +116,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block border-b border-bone-50/10 py-4 text-2xl font-extrabold uppercase tracking-tight text-bone-50"
+                    className="block border-b border-washi-50/10 py-4 text-2xl font-extrabold uppercase tracking-tight text-washi-50"
                   >
                     {link.label}
                   </Link>

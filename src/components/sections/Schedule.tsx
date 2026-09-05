@@ -10,17 +10,17 @@ export default function Schedule() {
       id="schedule"
       tone="white"
       eyebrow="Timetable & membership"
-      title="Find your slot. Pick your tier."
-      lead="Doors open at 06:00 on weekdays. Members train as often as their tier allows — no booking apps, no queueing, just show up."
+      title="Find your class. Pick your tier."
+      lead="Doors open at 06:00 on weekdays and the beginners’ course starts fresh every eight weeks. No booking app, no queue — bow in and take a place in the line."
     >
       <Reveal>
-        <div className="overflow-x-auto border border-navy-900/12">
+        <div className="overflow-x-auto border border-ink-900/12">
           <table className="w-full min-w-[42rem] border-collapse text-left">
             <caption className="sr-only">
               Weekly class timetable for KarateCorner
             </caption>
             <thead>
-              <tr className="bg-navy-900 text-bone-50">
+              <tr className="bg-ink-900 text-washi-50">
                 <th scope="col" className="px-6 py-4 text-xs font-bold uppercase tracking-[0.2em]">
                   Day
                 </th>
@@ -34,13 +34,13 @@ export default function Schedule() {
                 <tr
                   key={row.day}
                   className={cn(
-                    "border-t border-navy-900/10",
-                    i % 2 === 1 && "bg-bone-100",
+                    "border-t border-ink-900/10",
+                    i % 2 === 1 && "bg-washi-100",
                   )}
                 >
                   <th
                     scope="row"
-                    className="whitespace-nowrap px-6 py-5 align-top text-sm font-extrabold uppercase tracking-[0.14em] text-navy-900"
+                    className="whitespace-nowrap px-6 py-5 align-top text-sm font-extrabold uppercase tracking-[0.14em] text-ink-900"
                   >
                     {row.day}
                   </th>
@@ -48,10 +48,10 @@ export default function Schedule() {
                     <ul className="flex flex-wrap gap-x-8 gap-y-3">
                       {row.sessions.map((session) => (
                         <li key={session.time} className="flex items-baseline gap-3">
-                          <span className="text-sm font-extrabold tabular-nums text-brown-700">
+                          <span className="text-sm font-extrabold tabular-nums text-vermillion-700">
                             {session.time}
                           </span>
-                          <span className="text-sm font-semibold text-navy-800/80">
+                          <span className="text-sm font-semibold text-ink-800/80">
                             {session.name}
                           </span>
                         </li>
@@ -65,7 +65,7 @@ export default function Schedule() {
         </div>
       </Reveal>
 
-      <h3 className="mt-20 text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">
+      <h3 className="mt-20 text-3xl font-extrabold tracking-tight text-ink-900 md:text-4xl">
         Membership
       </h3>
       <ul className="mt-8 grid gap-8 lg:grid-cols-3">
@@ -75,12 +75,12 @@ export default function Schedule() {
               className={cn(
                 "flex h-full flex-col p-9",
                 tier.featured
-                  ? "bg-navy-900 text-bone-100 shadow-2xl shadow-navy-900/20"
-                  : "border border-navy-900/12 bg-bone-50 text-navy-900",
+                  ? "bg-ink-900 text-washi-100 shadow-2xl shadow-ink-900/20"
+                  : "border border-ink-900/12 bg-washi-50 text-ink-900",
               )}
             >
               {tier.featured && (
-                <p className="mb-5 inline-block self-start bg-brown-600 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-bone-50">
+                <p className="mb-5 inline-block self-start bg-vermillion-600 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-washi-50">
                   Most popular
                 </p>
               )}
@@ -104,7 +104,7 @@ export default function Schedule() {
                     <svg
                       aria-hidden="true"
                       viewBox="0 0 16 16"
-                      className="mt-1 h-3.5 w-3.5 shrink-0 text-brown-500"
+                      className="mt-1 h-3.5 w-3.5 shrink-0 text-vermillion-500"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth={2.5}
@@ -121,7 +121,7 @@ export default function Schedule() {
                   variant={tier.featured ? "primary" : "secondary"}
                   className={cn(
                     "w-full",
-                    !tier.featured && "border border-navy-900/15",
+                    !tier.featured && "border border-ink-900/15",
                   )}
                 >
                   Choose {tier.name}
@@ -131,9 +131,10 @@ export default function Schedule() {
           </Reveal>
         ))}
       </ul>
-      <p className="mt-8 text-sm font-semibold text-navy-800/60">
-        No joining fee. Cancel any time with 30 days&rsquo; notice. Family and
-        student discounts available at the front desk.
+      <p className="mt-8 text-sm font-semibold text-ink-800/60">
+        No joining fee, no fixed contract. Cancel any time with 30 days&rsquo;
+        notice. Concession rates for students, seniors and anyone for whom the
+        fee is the only thing standing in the way &mdash; just ask at the front desk.
       </p>
     </Section>
   );
