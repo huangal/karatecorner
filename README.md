@@ -60,6 +60,35 @@ src/
 `prefers-reduced-motion`). `Section` handles the tone alternation, eyebrow/title/lead
 header and `aria-labelledby` wiring.
 
+## Deployment
+
+The site is a **static export**. `npm run build` writes a plain HTML/CSS/JS site to
+`out/` — there are no route handlers, server actions or dynamic rendering, so nothing
+is lost by exporting. Two settings in [`next.config.ts`](next.config.ts) make it work,
+and both are load-bearing:
+
+- `output: "export"` — emits `out/` with a real `index.html`.
+- `images.unoptimized` — without it the export still emits `/_next/image?url=…` URLs
+  that need Next's optimizer server, and every photo 404s on a static host.
+
+### How it reaches karatecorner.huangal.com (Plesk)
+
+`main` holds source only; build output is never committed to it. On every push to
+`main`, [`.github/workflows/build-static-site.yml`](.github/workflows/build-static-site.yml)
+builds the site and force-pushes the *contents* of `out/` to a `deploy` branch. Plesk
+pulls `deploy` into the subdomain document root.
+
+Plesk side, one-time setup — Websites & Domains → karatecorner.huangal.com → Git:
+
+1. Point the repository at `git@github.com:huangal/karatecorner.git`.
+2. Set the tracked branch to **`deploy`** (not `main` — `main` is source, which is
+   what produces a 404).
+3. Set the deployment path to the subdomain document root (usually `httpdocs`).
+4. Leave "additional deployment actions" empty; the site arrives pre-built.
+
+To publish by hand instead, run `npm run build` and upload the *contents* of `out/`
+(not the folder itself) into the document root.
+
 ## Placeholder content to replace before launch
 
 - Copy, names, prices and the timetable in `src/lib/content.ts`.
