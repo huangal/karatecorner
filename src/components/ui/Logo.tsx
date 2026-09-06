@@ -1,6 +1,19 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export default function Logo({ className }: { className?: string }) {
+type LogoProps = {
+  className?: string;
+  /** Mark size in px. The wordmark scales with the surrounding text. */
+  size?: number;
+};
+
+/**
+ * The dojo mark: the kicking figure from the MyKaratesCorner lockup, in the
+ * reversed white artwork so it sits straight on the dark navbar and footer.
+ * The name is live text rather than part of the image — the wordmark inside
+ * the original lockup is unreadable below roughly 200px.
+ */
+export default function Logo({ className, size = 36 }: LogoProps) {
   return (
     <span
       className={cn(
@@ -8,17 +21,16 @@ export default function Logo({ className }: { className?: string }) {
         className,
       )}
     >
-      <svg
+      <Image
+        src="/logo-mark.png"
+        alt=""
         aria-hidden="true"
-        viewBox="0 0 32 32"
-        className="h-7 w-7 shrink-0"
-        fill="none"
-      >
-        <path d="M2 2h28v28H2z" className="fill-vermillion-600" />
-        {/* Torii: lintel, tie-beam, two posts. */}
-        <path d="M6 8h20v3H6zM8 14h16v2.5H8z" className="fill-washi-50" />
-        <path d="M10 11h3v13h-3zM19 11h3v13h-3z" className="fill-washi-50" />
-      </svg>
+        width={size}
+        height={size}
+        priority
+        className="shrink-0"
+        style={{ width: size, height: size }}
+      />
       Karate<span className="text-ochre-400">Corner</span>
     </span>
   );
