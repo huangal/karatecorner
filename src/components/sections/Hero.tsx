@@ -60,30 +60,33 @@ export default function Hero() {
           Est. 2009 — Northside
         </motion.p>
 
-        {/* Full lockup, reversed white artwork — sits directly on the dark ground. */}
-        <motion.div {...rise(0.04)} className="mb-6">
-          <Image
-            src="/logo.png"
-            alt=""
-            aria-hidden="true"
-            width={1200}
-            height={1200}
-            priority
-            className="h-24 w-24 sm:h-28 sm:w-28 lg:h-36 lg:w-36"
-          />
-        </motion.div>
+        {/* Lockup beside the headline: the reversed white artwork sits directly
+            on the dark ground, and sharing the row costs no vertical space. */}
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8 lg:gap-12">
+          <motion.div {...rise(0.04)} className="shrink-0">
+            <Image
+              src="/logo.png"
+              alt=""
+              aria-hidden="true"
+              width={1200}
+              height={1200}
+              priority
+              className="h-24 w-24 sm:h-32 sm:w-32 lg:h-48 lg:w-48"
+            />
+          </motion.div>
 
-        <motion.h1
-          {...rise(0.1)}
-          id="hero-heading"
-          className="max-w-5xl text-[3.25rem] font-extrabold leading-[0.86] tracking-tight text-washi-50 text-balance sm:text-7xl lg:text-[7rem]"
-        >
-          Every black belt
-          <br />
-          was once a
-          <br />
-          <span className="text-ochre-400">white belt.</span>
-        </motion.h1>
+          <motion.h1
+            {...rise(0.1)}
+            id="hero-heading"
+            className="text-[3.25rem] font-extrabold leading-[0.86] tracking-tight text-washi-50 text-balance sm:text-6xl lg:text-[6.5rem]"
+          >
+            Every black belt
+            <br />
+            was once a
+            <br />
+            <span className="text-ochre-400">white belt.</span>
+          </motion.h1>
+        </div>
 
         <motion.p
           {...rise(0.18)}
