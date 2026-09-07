@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
@@ -59,8 +60,21 @@ export default function Hero() {
           Est. 2009 — Northside
         </motion.p>
 
+        {/* Full lockup, reversed white artwork — sits directly on the dark ground. */}
+        <motion.div {...rise(0.04)} className="mb-6">
+          <Image
+            src="/logo.png"
+            alt=""
+            aria-hidden="true"
+            width={1200}
+            height={1200}
+            priority
+            className="h-24 w-24 sm:h-28 sm:w-28 lg:h-36 lg:w-36"
+          />
+        </motion.div>
+
         <motion.h1
-          {...rise(0.08)}
+          {...rise(0.1)}
           id="hero-heading"
           className="max-w-5xl text-[3.25rem] font-extrabold leading-[0.86] tracking-tight text-washi-50 text-balance sm:text-7xl lg:text-[7rem]"
         >
@@ -72,7 +86,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          {...rise(0.16)}
+          {...rise(0.18)}
           className="mt-8 max-w-xl text-lg leading-relaxed text-washi-200/75"
         >
           KarateCorner is a traditional dojo teaching Shotokan Karate, Aikido and
@@ -81,7 +95,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          {...rise(0.24)}
+          {...rise(0.26)}
           className="mt-11 flex flex-col gap-4 sm:flex-row sm:items-center"
         >
           <Button href="#contact" size="lg">
@@ -93,7 +107,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.dl
-          {...rise(0.34)}
+          {...rise(0.36)}
           className="mt-20 grid max-w-3xl grid-cols-1 gap-px border border-washi-50/12 bg-washi-50/12 sm:grid-cols-3"
         >
           {STATS.map((stat) => (
