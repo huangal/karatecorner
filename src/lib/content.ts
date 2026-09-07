@@ -114,32 +114,21 @@ export const INSTRUCTORS: Instructor[] = [
     rank: "Shihan · 7th Dan",
     discipline: "Chief Instructor — Shotokan",
     bio: "Trained under the JKA in Tokyo for eleven years before opening KarateCorner in 2009. Still teaches the Tuesday beginners' class himself.",
-    image:
-      "https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=800&q=80",
+    image: "/instructors/tanaka.jpg",
   },
   {
-    name: "Elena Marchetti",
+    name: "Rafael Marchetti",
     rank: "Sensei · 4th Dan Aikikai",
-    discipline: "Head Instructor — Aikido",
-    bio: "Certified through Hombu Dojo and twenty years on the mat. Teaches ukemi first, on the principle that confidence starts with landing safely.",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    discipline: "Head Instructor — Aikido & Kids Dojo",
+    bio: "Certified through Hombu Dojo and twenty years on the mat. Teaches ukemi first, on the principle that confidence starts with landing safely — which is also why he runs the children's classes.",
+    image: "/instructors/marchetti.jpg",
   },
   {
     name: "Chen Wei",
     rank: "Shifu · 32nd generation",
     discipline: "Head Instructor — Shaolin Kung Fu",
     bio: "Ordained in the Songshan lineage and a decade of temple training behind him. Runs the forms class and the Sunday qigong hour.",
-    image:
-      "https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    name: "Sofia Lindqvist",
-    rank: "Sensei · 3rd Dan",
-    discipline: "Youth Program Director",
-    bio: "Former junior national team coach and a qualified primary teacher. Turns restless eight-year-olds into the kids who welcome new starters.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+    image: "/instructors/chen.jpg",
   },
 ];
 

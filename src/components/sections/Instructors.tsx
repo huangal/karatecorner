@@ -10,9 +10,9 @@ export default function Instructors() {
       tone="washi"
       eyebrow="The instructors"
       title="Taught by people who still bow in."
-      lead="Four instructors, three lineages, one shared standard. Between them: a JKA apprenticeship in Tokyo, Aikikai certification through Hombu Dojo, and a Songshan transmission."
+      lead="Three instructors, one for each lineage, holding a single shared standard. Between them: a JKA apprenticeship in Tokyo, Aikikai certification through Hombu Dojo, and a Songshan transmission."
     >
-      <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {INSTRUCTORS.map((person, i) => (
           <Reveal as="li" key={person.name} delay={i * 0.08}>
             <article className="group h-full">
@@ -21,7 +21,7 @@ export default function Instructors() {
                   src={person.image}
                   alt={`Portrait of ${person.name}, ${person.discipline}`}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover grayscale transition duration-700 group-hover:scale-[1.04] group-hover:grayscale-0"
                 />
                 <div
