@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#263c66"/>
+      <stop offset="50%" stop-color="#152036"/>
+      <stop offset="100%" stop-color="#080b12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1010" cy="300" r="180" fill="none" stroke="#d6a542" stroke-opacity="0.18" stroke-width="10"/>
+  <rect x="80" y="150" width="60" height="8" fill="#d6a542"/>
+  <text x="80" y="228" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#e5bf72" letter-spacing="8">KARATECORNER</text>
+  <text x="80" y="352" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="88" font-weight="800" fill="#fffdf9">Every black belt was</text>
+  <text x="80" y="448" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="88" font-weight="800" fill="#fffdf9">once a <tspan fill="#d6a542">white belt.</tspan></text>
+  <text x="80" y="532" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="29" font-weight="600" fill="#f2ebdf" fill-opacity="0.72">Shotokan Karate · Aikido · Shaolin Kung Fu · Kids Dojo</text>
+</svg>
