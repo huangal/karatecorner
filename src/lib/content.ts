@@ -113,7 +113,7 @@ export const INSTRUCTORS: Instructor[] = [
     name: "Hiroshi Tanaka",
     rank: "Shihan · 7th Dan",
     discipline: "Chief Instructor — Shotokan",
-    bio: "Trained in Tokyo for eleven years under the traditional Shotokan syllabus before opening KarateCorner in 2009. Still teaches the Tuesday beginners' class himself.",
+    bio: "Trained in Tokyo under the traditional Shotokan syllabus before opening KarateCorner. Still teaches the Tuesday beginners' class himself.",
     image: "/instructors/tanaka.jpg",
   },
   {
@@ -125,7 +125,7 @@ export const INSTRUCTORS: Instructor[] = [
   },
   {
     name: "Chen Wei",
-    rank: "Shifu · 32nd generation",
+    rank: "Shifu · 16th generation",
     discipline: "Head Instructor — Shaolin Kung Fu",
     bio: "Ordained in the Songshan lineage and a decade of temple training behind him. Runs the forms class and the Sunday qigong hour.",
     image: "/instructors/chen.jpg",
@@ -172,15 +172,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     year: "2021",
     title: "Songshan Lineage Certified",
     detail:
-      "Shifu Chen Wei's 32nd-generation transmission formally recognised, bringing Shaolin forms into the dojo.",
+      "Shifu Chen Wei's 16th-generation transmission formally recognised, bringing Shaolin forms into the dojo.",
     badge: "少",
-  },
-  {
-    year: "2019",
-    title: "Ten Years on the Mat",
-    detail:
-      "A decade of training, and the 200th student to grade to shodan under this roof.",
-    badge: "10",
   },
 ];
 

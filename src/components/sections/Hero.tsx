@@ -94,7 +94,7 @@ export default function Hero() {
         >
           KarateCorner is a traditional dojo teaching Shotokan Karate, Aikido and
           Shaolin Kung Fu. No experience needed, no contracts, no minimum
-          fitness — just a clean mat, patient instruction, and a place to begin.
+          fitness — just a open mind, patient instruction, and a willing to have fun.
         </motion.p>
 
         <motion.div
