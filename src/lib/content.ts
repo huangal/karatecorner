@@ -54,7 +54,7 @@ export const PROGRAMS: Program[] = [
     name: "Shotokan Karate",
     tagline: "松濤館 · Empty hand",
     description:
-      "Kihon, kata and controlled kumite in the JKA tradition. Deep stances, long lines, and the patient repetition every grading is built on.",
+      "Kihon, kata and controlled kumite in the Shotokan karate tradition. Deep stances, long lines, and the patient repetition every grading is built on.",
     level: "All levels",
     icon: "karate",
   },
@@ -113,7 +113,7 @@ export const INSTRUCTORS: Instructor[] = [
     name: "Hiroshi Tanaka",
     rank: "Shihan · 7th Dan",
     discipline: "Chief Instructor — Shotokan",
-    bio: "Trained under the JKA in Tokyo for eleven years before opening KarateCorner in 2009. Still teaches the Tuesday beginners' class himself.",
+    bio: "Trained in Tokyo for eleven years under the traditional Shotokan syllabus before opening KarateCorner in 2009. Still teaches the Tuesday beginners' class himself.",
     image: "/instructors/tanaka.jpg",
   },
   {

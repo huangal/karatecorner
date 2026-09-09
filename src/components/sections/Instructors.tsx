@@ -10,7 +10,7 @@ export default function Instructors() {
       tone="washi"
       eyebrow="The instructors"
       title="Taught by people who still bow in."
-      lead="Three instructors, one for each lineage, holding a single shared standard. Between them: a JKA apprenticeship in Tokyo, Aikikai certification through Hombu Dojo, and a Songshan transmission."
+      lead="Three instructors, one for each lineage, holding a single shared standard. Between them: eleven years of Shotokan training in Tokyo, Aikikai certification through Hombu Dojo, and a Songshan transmission."
     >
       <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {INSTRUCTORS.map((person, i) => (
